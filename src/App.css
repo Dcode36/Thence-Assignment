@@ -1,38 +1,408 @@
-.App {
+* {
+  font-family: "Manrope", sans-serif;
+}
+
+.primaryCTA {
+  padding: 15px 30px;
+  background-color: #1C1C1C;
+  color: #FFFFFF;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.primaryCTA:hover {
+  background-color: #4E4E4E;
+}
+
+.primaryCTA:hover~.ctaBtn i {
+  margin-left: 10px;
+}
+
+
+.secandaryCTA {
+  padding: 15px 30px;
+  border: 1px solid #EAEAEA;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+  cursor: pointer;
+
+}
+
+.close-btn {
+  height: 70px;
+  width: 70px;
+  border-radius: 50px;
+  font-size: 30px;
+  background-color: transparent;
+  border: 1px solid #4E4E4E;
+}
+
+.secandaryCTA:hover {
+  background-color: #F1F1F1;
+}
+
+
+.navbar {
+
+  border-radius: 65.28px;
+
+}
+
+.home-border {
+  border: 2px solid #EAEAEA;
+}
+
+.no-border {
+  border: none;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.hero-success-title {
+  font-family: "Covered By Your Grace", cursive;
+  color: #2DA950;
+  font-size: 36px;
+}
+
+.primary-text {
+  font-weight: 500;
+  font-size: 56px;
+  text-align: center;
+  width: 588px;
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: none;
+  border-radius: 27.11px;
+}
+
+.person {
+  border-radius: 27.11px;
+  margin-left: 100px;
+}
+
+@media (max-width:1252px) {
+  .person {
+    margin-left: 0px;
+    width: 80%;
+  }
+
+}
+
+.card1 {
+  left: 5px;
+  top: 10%;
+  width: 30%;
+  /* Set width as a percentage of the container's width */
+  height: auto;
+  /* Allow the height to adjust based on content */
+  position: absolute;
+}
+
+.card1 img {
+  z-index: 1000;
+  top: -30px;
+  left: -20px;
+  opacity: 0.3;
+  width: 100%;
+  /* Ensure the image fills the container */
+}
+
+.card2 {
+  bottom: 40px;
+  left: 5%;
+  width: 40%;
+  /* Set width as a percentage of the container's width */
+  height: auto;
+  /* Allow the height to adjust based on content */
+  position: absolute;
+}
+
+.card3 {
+  width: 40%;
+  height: auto;
+  bottom: -40px;
+  right: -5%;
+
+  position: absolute;
+}
+
+.card-title {
+  font-size: 30px;
+}
+
+.card-title2 {
+  font-size: 20px;
+}
+
+.card-description {
+  font-size: 18px;
+}
+
+.card-section {
+  width: 100%;
+}
+
+.section-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+.dots {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.dots .dot {
+  height: 10px;
+  width: 10px;
+  background-color: #E4E3E3;
+  border-radius: 50%;
+}
+
+.dots .dot:nth-child(1) {
+  background-color: #2DA950;
+}
+
+.pbtn {
+  width: 300px;
+}
+
+.faq-section {
+  background-color: #E8EEE7;
+  border-radius: 40px;
+  padding: 20px;
+}
+
+.accordion-item {
+  background-color: transparent;
+  /* Set background to transparent */
+  /* Remove border */
+  border: none;
+}
+
+.accordion-button {
+  background-color: transparent;
+  /* Set button background to transparent */
+  color: #000;
+  font-weight: 500;
+  /* Set button text color */
+  border: none;
+}
+
+
+.accordion-button.active {
+  background-color: transparent;
+  border: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  /* Remove focus box shadow */
+  border: none;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+  border: none;
+}
+
+.accordion-button::after {
+  display: none;
+  /* Hide the icon completely */
+}
+
+.accordion-button:not(.collapsed)::after {
+  display: none;
+  /* Hide the right-end icon when accordion is expanded */
+}
+
+.accordion-button:not(.collapsed):hover {
+  background-color: transparent;
+  /* Remove hover background color */
+}
+
+.accordion-body {
+  font-size: 14px;
+  color: #00000074;
+}
+
+.faq-arrow {
+  font-size: 700px !important;
+  position: absolute;
+  bottom: -567px;
+  left: -100px;
+  color: rgba(255, 255, 255, 0.708);
+  z-index: 0;
+  opacity: 0.4;
+}
+
+.footer {
+  background-color: #F5F5F5;
+  border-radius: 40px;
+}
+
+input {
+  width: 400px;
+  padding: 15px 30px;
+  border-radius: 50px;
+  margin: 10px 0;
+  background-color: #EFEFEF;
+  border: none;
+}
+
+form button {
+  padding: 15px 30px;
+  border-radius: 50px;
+  margin: 13px 0;
+  background-color: #C9C9C9;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+.error-message {
+  font-weight: 500;
+  color: red;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.success-msg {
+  width: 50%;
+  color: #4E4E4E;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.redirection {
+  color: #4E4E4E;
+}
+
+@media (max-width:673px) {
+  .card1 {
+    width: 70%;
+    top: -80px;
+  }
+
+  .card-description {
+    font-size: 12px !important;
+  }
+
+  .primaryCTA {
+    padding: 5px 12px;
+    font-size: 12px;
+    width: 100%;
+    background-color: #1C1C1C;
+    color: #FFFFFF;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+    cursor: pointer;
+    text-align: center;
+  }
+
+}
+
+@media (max-width:673px) {
+  .secandaryCTA {
+    padding: 5px 10px;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .primary-text {
+    width: 80%;
+    font-size: 46px;
+  }
+
+  .card2 {
+    bottom: -10px;
+    left: 5%;
+    width: 40%;
+    /* Set width as a percentage of the container's width */
+    height: auto;
+    /* Allow the height to adjust based on content */
+    position: absolute;
+  }
+
+  .card-description {
+    font-size: 10px;
+  }
+
+  .section-title {
+    margin-top: 20px;
+  }
+
+  .icon {
+    height: 30px;
+  }
+
+  .primary-text {
+    font-weight: 500;
+    font-size: 36px;
+    text-align: center;
+    width: 1005;
+  }
+  .menubtn{
+    display: none !important;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width:992px) {
+  .person {
+    margin-left: 0px;
+    width: 80%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .card-section {
+    width: 100%;
   }
+
+  .responsive {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex: 1;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .card1,
+  .card2,
+  .card3 {
+    font-size: 10px;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .card-title2 {
+    font-size: 16px;
+  }
+
+  .card-description {
+    font-size: 12px;
+  }
+
 }
