@@ -40,10 +40,10 @@ const FormPage = () => {
             <Hero stitle="Registration Form" sdescription="Start your success journey here!" />
             <div className="d-flex justify-content-center align-items-center">
                 <form onSubmit={handleSubmit} className="d-flex justify-content-center flex-column">
-                    <input type="text" placeholder="Enter your name" data-aos="zoom-in-up" />
-                    <input type="email" placeholder="Enter your email" value={email} onChange={handleEmailChange} onBlur={validateEmail} data-aos="zoom-in-up" />
+                    <input type="text" placeholder="Enter your name"  />
+                    <input type="email" placeholder="Enter your email" value={email} onChange={handleEmailChange} onBlur={validateEmail}  />
                     {emailError && <div className="error-message">{emailError}</div>}
-                    <button type="submit" style={{ backgroundColor: isButtonBlack ? 'black' : '' }} data-aos="zoom-in-up">Submit</button>
+                    <button type="submit" style={{ backgroundColor: isButtonBlack ? 'black' : '' }} >Submit</button>
                 </form>
             </div>
         </>

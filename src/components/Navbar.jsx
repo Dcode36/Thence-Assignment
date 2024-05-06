@@ -9,7 +9,7 @@ const NavBar = () => {
     const isHome = location.pathname === '/';
     return (
         <>
-      <nav className={`navbar m-4 px-4 ${isHome ? 'home-border' : 'no-border'}`}>
+            <nav className={`navbar m-4 px-4 ${isHome ? 'home-border' : 'no-border'}`}>
                 <div className="logo m-4">
                     <img src={logo} alt="" />
                 </div>
@@ -19,7 +19,7 @@ const NavBar = () => {
                         <PrimaryCTA title="Onboard Talent" icon="" />
                     </div>
                 ) : (
-                    <button onClick={() => window.history.back()} className="close-btn"><i class="bi bi-x-lg"></i></button>
+                    <button onClick={() => window.history.back()} className="close-btn d-flex justify-content-center align-items-center test-dark"><i class="bi bi-x-lg"></i></button>
                 )}
 
             </nav>
